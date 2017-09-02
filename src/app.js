@@ -1,4 +1,6 @@
-require('@google-cloud/debug-agent').start({ allowExpressions: true })
+if (process.env.NODE_ENV === 'production') {
+  require('@google-cloud/debug-agent').start({ allowExpressions: true })
+}
 
 const express = require('express')
 const app = express()
