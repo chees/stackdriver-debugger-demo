@@ -14,9 +14,9 @@ Generate source context files (do this before each docker build):
 
 Build and push the Docker container:
 
-    docker build -t eu.gcr.io/code-cooking/debugging-demo:0.1 .
+    docker build -t eu.gcr.io/code-cooking/debugging-demo:0.3 .
 
-    gcloud docker -- push eu.gcr.io/code-cooking/debugging-demo:0.1
+    gcloud docker -- push eu.gcr.io/code-cooking/debugging-demo:0.3
 
 Deploy to Kubernetes:
 
