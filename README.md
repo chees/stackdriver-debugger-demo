@@ -1,5 +1,9 @@
 # Stackdriver debugger demo
-See https://cloud.google.com/debugger/docs/setup/nodejs
+
+See this screenrecording on YouTube for the demo:
+
+[![YouTube video](http://img.youtube.com/vi/197-B9HTJ7o/0.jpg)](http://www.youtube.com/watch?v=197-B9HTJ7o "Stackdriver Debugger Node.js demo")
+
 
 ## Setup
 Create a cluster and connect to it:
@@ -14,9 +18,9 @@ Generate source context files (do this before each docker build):
 
 Build and push the Docker container:
 
-    docker build -t eu.gcr.io/code-cooking/debugging-demo:0.3 .
+    docker build -t eu.gcr.io/code-cooking/debugging-demo:0.4 .
 
-    gcloud docker -- push eu.gcr.io/code-cooking/debugging-demo:0.3
+    gcloud docker -- push eu.gcr.io/code-cooking/debugging-demo:0.4
 
 Deploy to Kubernetes:
 
@@ -25,3 +29,30 @@ Deploy to Kubernetes:
 Debug:
 
     open https://console.cloud.google.com/debug?project=code-cooking
+
+
+## Demo script
+
+- What is it
+  - Live debugging of applications without interruption
+  - Adding logs to running applications
+
+- How does it work
+  - app.js
+  - Dockerfile
+  - source-context
+  - deployment.yaml
+
+- Deploy version 4
+
+- Snapshot
+  - req
+  - req.headers
+
+- Log
+  - req.headers
+
+- Why cool
+  - reduces debug time
+  - much faster than typical add logs -> deploy -> add logs -> deploy cycle
+  - tradeoff signal versus noise in logging
